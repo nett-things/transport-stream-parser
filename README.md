@@ -4,10 +4,12 @@ This simple Python module provides fucntions for parsing `MPEG2 TS` into TS pack
 
 ## Usage
 
-Just import the package and use `parse_TS()` function to parse the TS packets from a file.
+To use the package, move the `ts_parser` folder to the working directory of the script to be executed, or install it by executing `python -m pip install -e .` in the `transport-stream-parser` directory.
+
+Then, import the package and use `parse_TS()` function to parse the TS packets from a file.
 
 ``` Python
-import ts_parser as tsp
+import ts_parser.parser as tsp
 
 TS_packets = tsp.parse_TS('data/sample.ts')
 ```
@@ -27,6 +29,6 @@ PES_packets = tsp.reassemble_PES(TS_packets, 257)
 
 ## Disclaimer
 
-This is a simple module. It does not parse all the packet fields (at least yet), especially those not requiered to extract audio or video from the transport stream.
+This is a simple module. It does not parse all the packet fields (at least not yet), especially those not requiered to extract audio or video from the transport stream.
 
 
